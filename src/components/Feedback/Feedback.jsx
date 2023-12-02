@@ -9,15 +9,14 @@ function Feedback() {
 
     const [feelingInput, setFeelingInput] = useState('');
 
-    const setFeeling = (e) => {
-        feelingInput = e.target.value
+    const setFeeling = () => {
 
         dispatch({
             type: 'SET_FEELING',
-            payload: { feelingInput }
+            payload: feelingInput
         })
 
-        history.push("/understanding")
+        // history.push("/understanding")
 
     }
 

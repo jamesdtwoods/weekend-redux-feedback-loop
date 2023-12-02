@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import Feedback from '../Feedback/Feedback';
+import Understanding from '../Understanding/Understanding';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Feedback />
+      <Understanding />
     </div>
   );
 }
