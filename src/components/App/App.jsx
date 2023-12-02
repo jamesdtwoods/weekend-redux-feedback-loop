@@ -5,6 +5,7 @@ import Feedback from '../Feedback/Feedback';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
+import Review from '../Review/Review';
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
       <Understanding />
       <Support />
       <Comment />
+      <br></br>
+      <Review />
     </div>
   );
 }
