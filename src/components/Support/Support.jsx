@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link  } from 'react-router-dom';
 
 function Support() {
     const dispatch = useDispatch()
@@ -17,7 +17,6 @@ function Support() {
                 type: 'SET_SUPPORT',
                 payload: supportInput
             })
-            setSupportInput('')
             history.push("/comment")
         }
     }
@@ -34,6 +33,7 @@ function Support() {
                 placeholder='Support?'
             />
             <button data-testid="next" onClick={setSupport}>Next</button>
+            <Link to="/understanding"><button>Back</button></Link>
         </>
 
     )

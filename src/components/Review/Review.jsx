@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Review() {
@@ -29,6 +29,7 @@ function Review() {
             <h4>Support: {support}</h4>
             <h4>Comments: {comments}</h4>
             <button data-testid="next" onClick={submitFeedback}>Submit</button>
+            <Link to="/comment"><button>Back</button></Link>
         </div>
     )
 }

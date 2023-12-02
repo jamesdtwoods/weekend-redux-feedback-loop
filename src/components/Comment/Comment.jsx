@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link  } from 'react-router-dom';
 
 function Comment() {
     const dispatch = useDispatch()
@@ -15,7 +15,6 @@ function Comment() {
             type: 'SET_COMMENT',
             payload: commentInput
         })
-        setCommentInput('')
         history.push("/review")
 
     }
@@ -32,6 +31,7 @@ function Comment() {
                 placeholder='Comment?'
             />
             <button data-testid="next" onClick={setComment}>Next</button>
+            <Link to="/support"><button>Back</button></Link>
         </>
 
     )

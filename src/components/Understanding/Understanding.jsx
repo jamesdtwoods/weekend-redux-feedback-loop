@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 function Understanding() {
     const dispatch = useDispatch()
@@ -17,7 +17,6 @@ function Understanding() {
                 type: 'SET_UNDERSTANDING',
                 payload: understandingInput
             })
-            setUnderstandingInput('')
             history.push("/support")
         }
     }
@@ -34,6 +33,7 @@ function Understanding() {
                 placeholder='Understanding?'
             />
             <button data-testid="next" onClick={setUnderstanding}>Next</button>
+            <Link to="/"><button>Back</button></Link>
         </>
 
     )

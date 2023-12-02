@@ -17,7 +17,6 @@ function Feeling() {
                 type: 'SET_FEELING',
                 payload: feelingInput
             })
-            setFeelingInput('')
             history.push("/understanding")
         }
     }
