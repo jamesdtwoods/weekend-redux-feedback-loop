@@ -10,14 +10,16 @@ function Understanding() {
     const [understandingInput, setUnderstandingInput] = useState('');
 
     const setUnderstanding = () => {
-
-        dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: understandingInput
-        })
-        setUnderstandingInput('')
-        history.push("/support")
-
+        if (understandingInput === '') {
+            alert("Please enter a rating 🤠")
+        } else {
+            dispatch({
+                type: 'SET_UNDERSTANDING',
+                payload: understandingInput
+            })
+            setUnderstandingInput('')
+            history.push("/support")
+        }
     }
 
 

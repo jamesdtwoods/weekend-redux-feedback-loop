@@ -10,15 +10,16 @@ function Feeling() {
     const [feelingInput, setFeelingInput] = useState('');
 
     const setFeeling = () => {
-
-        dispatch({
-            type: 'SET_FEELING',
-            payload: feelingInput
-        })
-
-        setFeelingInput('')
-        history.push("/understanding")
-
+        if (feelingInput === '') {
+            alert("Please enter a rating 🤠")
+        } else {
+            dispatch({
+                type: 'SET_FEELING',
+                payload: feelingInput
+            })
+            setFeelingInput('')
+            history.push("/understanding")
+        }
     }
 
 

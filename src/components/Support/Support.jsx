@@ -10,14 +10,16 @@ function Support() {
     const [supportInput, setSupportInput] = useState('');
 
     const setSupport = () => {
-
-        dispatch({
-            type: 'SET_SUPPORT',
-            payload: supportInput
-        })
-        setSupportInput('')
-        history.push("/comment")
-
+        if (supportInput === '') {
+            alert("Please enter a rating 🤠")
+        } else {
+            dispatch({
+                type: 'SET_SUPPORT',
+                payload: supportInput
+            })
+            setSupportInput('')
+            history.push("/comment")
+        }
     }
 
 
