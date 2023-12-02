@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
@@ -6,7 +7,8 @@ import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
 import SubmissionSuccess from '../SubmissionSuccess/SubmissionSuccess';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import Admin from '../Admin/Admin';
+
 
 function App() {
 
@@ -34,6 +36,9 @@ function App() {
         </Route>
         <Route exact path="/submissionSuccess">
           <SubmissionSuccess />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
         </Route>
       </Router>
     </div>
