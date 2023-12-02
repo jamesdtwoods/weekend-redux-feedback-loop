@@ -42,6 +42,23 @@ router.delete('/:id', (req, res) => {
       });
   });
 
+  router.put('/flagged/:id', (req, res) => {
+    const sqlQueryText = 
+    `
+    UPDATE "feedback"
+    SET "flagged" = NOT "flagged"
+      WHERE "id" = ($1);
+    `
+    const sqlValues = [req.params.id];
+    pool.query(sqlQueryText, sqlValues)
+      .then((dbResult) => {
+        res.sendStatus(200);
+      }).catch((dbError) => {
+        console.log('PUT /flagged SQL query failed:', dbError);
+        res.sendStatus(500);
+      })
+  });
+
 
 // DO NOT EDIT THIS ROUTE
 // This route must return all feedback.

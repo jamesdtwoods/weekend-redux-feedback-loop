@@ -41,6 +41,7 @@ function Admin() {
                         <th>Support</th>
                         <th>Comments</th>
                         <th>Delete</th>
+                        <th>Flag for review</th>
                     </tr>
                 </thead>
                 <tbody>
