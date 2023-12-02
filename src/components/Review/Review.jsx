@@ -19,15 +19,16 @@ function Review() {
         }).catch((err) => {
             console.log(err);
         });
-        // history.push("/SubmissionSuccess")
+        history.push("/submissionSuccess")
     }
     return (
         <div>
+            <h4>Review your feedback</h4>
             <h4>Feelings: {feeling}</h4>
             <h4>Understanding: {understanding}</h4>
             <h4>Support: {support}</h4>
             <h4>Comments: {comments}</h4>
-            <button onClick={submitFeedback}>Submit</button>
+            <button data-testid="next" onClick={submitFeedback}>Submit</button>
         </div>
     )
 }

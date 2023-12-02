@@ -16,7 +16,7 @@ function Comment() {
             payload: commentInput
         })
         setCommentInput('')
-        // history.push("/comments")
+        history.push("/review")
 
     }
 
@@ -25,12 +25,13 @@ function Comment() {
         <>
             <h2>Any comments you want to leave?</h2>
             <input
+                data-testid="input"
                 onChange={(e) => setCommentInput(e.target.value)}
                 value={commentInput}
                 type='text'
                 placeholder='Comment?'
             />
-            <button onClick={setComment}>Next</button>
+            <button data-testid="next" onClick={setComment}>Next</button>
         </>
 
     )

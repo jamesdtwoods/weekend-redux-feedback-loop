@@ -16,7 +16,7 @@ function Understanding() {
             payload: understandingInput
         })
         setUnderstandingInput('')
-        // history.push("/support")
+        history.push("/support")
 
     }
 
@@ -25,12 +25,13 @@ function Understanding() {
         <>
             <h2>How are you understanding the content?</h2>
             <input
+                data-testid="input"
                 onChange={(e) => setUnderstandingInput(e.target.value)}
                 value={understandingInput}
                 type='number'
                 placeholder='Understanding?'
             />
-            <button onClick={setUnderstanding}>Next</button>
+            <button data-testid="next" onClick={setUnderstanding}>Next</button>
         </>
 
     )

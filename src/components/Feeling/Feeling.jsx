@@ -17,7 +17,7 @@ function Feeling() {
         })
 
         setFeelingInput('')
-        // history.push("/understanding")
+        history.push("/understanding")
 
     }
 
@@ -26,12 +26,13 @@ function Feeling() {
         <>
             <h2>How are you feeling today?</h2>
             <input
+                data-testid="input"
                 onChange={(e) => setFeelingInput(e.target.value)}
                 value={feelingInput}
                 type='number'
                 placeholder='Feeling?'
             />
-            <button onClick={setFeeling}>Next</button>
+            <button data-testid="next" onClick={setFeeling}>Next</button>
         </>
 
     )

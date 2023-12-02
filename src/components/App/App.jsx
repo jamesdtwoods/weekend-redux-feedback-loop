@@ -6,23 +6,36 @@ import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
 import SubmissionSuccess from '../SubmissionSuccess/SubmissionSuccess';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-      <Feeling />
-      <Understanding />
-      <Support />
-      <Comment />
-      <br></br>
-      <Review />
-      <br />
-      <SubmissionSuccess />
+      <Router>
+        <header className='App-header'>
+          <h1 className='App-title'>Feedback!</h1>
+          <h4>Don't forget it!</h4>
+        </header>
+        <Route exact path="/">
+          <Feeling />
+        </Route>
+        <Route exact path="/understanding">
+          <Understanding />
+        </Route>
+        <Route exact path="/support">
+          <Support />
+        </Route>
+        <Route exact path="/comment">
+          <Comment />
+        </Route>
+        <Route exact path="/review">
+          <Review />
+        </Route>
+        <Route exact path="/submissionSuccess">
+          <SubmissionSuccess />
+        </Route>
+      </Router>
     </div>
   );
 }

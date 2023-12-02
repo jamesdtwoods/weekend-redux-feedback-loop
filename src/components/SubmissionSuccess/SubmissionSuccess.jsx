@@ -10,12 +10,12 @@ function SubmissionSuccess() {
         dispatch({
             type: 'CLEAR_FEEDBACK'
         })
-        // history.push("/")
+        history.push("/")
     }
     return (
         <div>
             <h4>Thank You!</h4>
-            <button onClick={newFeedback}>Leave New Feedback</button>
+            <button data-testid="next" onClick={newFeedback}>Leave New Feedback</button>
         </div>
     )
 }

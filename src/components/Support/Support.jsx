@@ -16,7 +16,7 @@ function Support() {
             payload: supportInput
         })
         setSupportInput('')
-        // history.push("/comments")
+        history.push("/comment")
 
     }
 
@@ -25,12 +25,13 @@ function Support() {
         <>
             <h2>How well are you being supported?</h2>
             <input
+                data-testid="input"
                 onChange={(e) => setSupportInput(e.target.value)}
                 value={supportInput}
                 type='number'
                 placeholder='Support?'
             />
-            <button onClick={setSupport}>Next</button>
+            <button data-testid="next" onClick={setSupport}>Next</button>
         </>
 
     )
