@@ -15,7 +15,7 @@ function Support() {
             type: 'SET_SUPPORT',
             payload: supportInput
         })
-
+        setSupportInput('')
         // history.push("/comments")
 
     }

@@ -15,7 +15,7 @@ function Comment() {
             type: 'SET_COMMENT',
             payload: commentInput
         })
-
+        setCommentInput('')
         // history.push("/comments")
 
     }

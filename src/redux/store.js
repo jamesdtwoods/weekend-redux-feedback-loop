@@ -3,7 +3,9 @@ import logger from 'redux-logger';
 
 const feeling = (state = 0, action) => {
   if (action.type === 'SET_FEELING') {
-    return action.payload
+    return action.payload;
+} if (action.type === 'CLEAR_FEEDBACK') {
+    return 0;
 }
   return state;
 }
@@ -11,21 +13,27 @@ const feeling = (state = 0, action) => {
 const understanding = (state = 0, action) => {
     if (action.type === 'SET_UNDERSTANDING') {
       return action.payload
-  }
+  } if (action.type === 'CLEAR_FEEDBACK') {
+    return 0;
+}
     return state;
 }
 
 const support = (state = 0, action) => {
     if (action.type === 'SET_SUPPORT') {
       return action.payload
-  }
+  } if (action.type === 'CLEAR_FEEDBACK') {
+    return 0;
+}
     return state;
 }
 
 const comment = (state = 0, action) => {
     if (action.type === 'SET_COMMENT') {
       return action.payload
-  }
+  } if (action.type === 'CLEAR_FEEDBACK') {
+    return 0;
+}
     return state;
 }
 

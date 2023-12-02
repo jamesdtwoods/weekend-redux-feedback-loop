@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
-function Feedback() {
+function Feeling() {
     const dispatch = useDispatch()
 
     const history = useHistory()
@@ -16,6 +16,7 @@ function Feedback() {
             payload: feelingInput
         })
 
+        setFeelingInput('')
         // history.push("/understanding")
 
     }
@@ -36,4 +37,4 @@ function Feedback() {
     )
 }
 
-export default Feedback
+export default Feeling

@@ -15,7 +15,7 @@ function Understanding() {
             type: 'SET_UNDERSTANDING',
             payload: understandingInput
         })
-
+        setUnderstandingInput('')
         // history.push("/support")
 
     }

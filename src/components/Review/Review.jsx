@@ -19,7 +19,7 @@ function Review() {
         }).catch((err) => {
             console.log(err);
         });
-        // history.push("/")
+        // history.push("/SubmissionSuccess")
     }
     return (
         <div>
