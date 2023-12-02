@@ -22,12 +22,20 @@ const setSupport = (state = 0, action) => {
     return state;
 }
 
+const setComment = (state = 0, action) => {
+    if (action.type === 'SET_COMMENT') {
+      return action.payload
+  }
+    return state;
+}
+
 
 const store = createStore(
     combineReducers({
       setFeeling,
       setUnderstanding,
-      setSupport
+      setSupport,
+      setComment
     }),
     applyMiddleware(logger),
   );
