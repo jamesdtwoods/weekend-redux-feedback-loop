@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import {Button, Rating, Typography, TextField} from '@mui/material';
+
 
 function Feeling() {
     const dispatch = useDispatch()
@@ -10,8 +12,8 @@ function Feeling() {
     const [feelingInput, setFeelingInput] = useState('');
 
     const setFeeling = () => {
-        if (feelingInput === '') {
-            alert("Please enter a rating 🤠")
+        if (feelingInput === '' || feelingInput > 5 || feelingInput < 0) {
+            alert("Please enter a rating between 0 and 5")
         } else {
             dispatch({
                 type: 'SET_FEELING',
@@ -24,7 +26,7 @@ function Feeling() {
 
     return(
         <>
-            <h2>How are you feeling today?</h2>
+            {/* <h2>How are you feeling today?</h2>
             <input
                 data-testid="input"
                 onChange={(e) => setFeelingInput(e.target.value)}
@@ -32,7 +34,31 @@ function Feeling() {
                 type='number'
                 placeholder='Feeling?'
             />
-            <button data-testid="next" onClick={setFeeling}>Next</button>
+            <br />
+            <br /> */}
+            {/* <Typography component="legend"><h2>How are you feeling today?</h2></Typography>
+            <Rating
+                name="feeling"
+                value={feelingInput}
+                onChange={(e) => setFeelingInput(e.target.value)}
+            />
+            <br />
+            <br /> */}
+            <TextField
+                id="outlined-number"
+                label="Feeling?"
+                type="number"
+                InputLabelProps={{
+                    shrink: true,
+                }}
+                onChange={(e) => setFeelingInput(e.target.value)}
+                value={feelingInput}
+                error={feelingInput > 5 || feelingInput < 0}
+                helperText="Must enter a value between 0 and 5"
+            />
+            <br />
+            <br />
+            <Button data-testid="next" onClick={setFeeling} variant="contained">Next</Button>
         </>
 
     )

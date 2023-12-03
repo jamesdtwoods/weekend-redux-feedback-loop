@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 
 function SubmissionSuccess() {
@@ -15,7 +16,7 @@ function SubmissionSuccess() {
     return (
         <div>
             <h4>Thank You!</h4>
-            <button data-testid="next" onClick={newFeedback}>Leave New Feedback</button>
+            <Button variant="contained" data-testid="next" onClick={newFeedback}>Leave New Feedback</Button>
         </div>
     )
 }
