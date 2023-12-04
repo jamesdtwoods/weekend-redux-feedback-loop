@@ -25,8 +25,8 @@ function Understanding() {
 
     return(
         <>
-            {/* <h2>How are you understanding the content?</h2>
-            <input
+            <h2>How are you understanding the content?</h2>
+            {/* <input
                 data-testid="input"
                 onChange={(e) => setUnderstandingInput(e.target.value)}
                 value={understandingInput}

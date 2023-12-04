@@ -25,8 +25,8 @@ function Support() {
 
     return(
         <>
-            {/* <h2>How well are you being supported?</h2>
-            <input
+            <h2>How well are you being supported?</h2>
+            {/* <input
                 data-testid="input"
                 onChange={(e) => setSupportInput(e.target.value)}
                 value={supportInput}
@@ -37,7 +37,7 @@ function Support() {
             <br /> */}
             <TextField
                 id="outlined-number"
-                label="Understanding?"
+                label="Supported?"
                 type="number"
                 InputLabelProps={{
                     shrink: true,

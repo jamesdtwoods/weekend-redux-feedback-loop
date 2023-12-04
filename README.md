@@ -8,7 +8,7 @@
 
 _Duration: one weekend_
 
-This was my first solo full stack CRUD web app using redux to handle state and Material UI for styling.
+This was my first solo full stack CRUD web app using redux to handle state and Material UI for styling. It's also my first time hosting something, [check it out!](https://lit-ridge-30420-4b7e6abf41cc.herokuapp.com/#/)
 
 ## Screen Shot
 
