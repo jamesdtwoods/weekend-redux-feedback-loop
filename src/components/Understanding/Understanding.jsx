@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory, Link } from 'react-router-dom';
-import {Button, Rating, Typography} from '@mui/material';
+import {Button, TextField} from '@mui/material';
 
 function Understanding() {
     const dispatch = useDispatch()
@@ -35,11 +35,17 @@ function Understanding() {
             />
             <br />
             <br /> */}
-            <Typography component="legend"><h2>How are you understanding the content?</h2></Typography>
-            <Rating
-                name="understanding"
-                value={understandingInput}
+            <TextField
+                id="outlined-number"
+                label="Understanding?"
+                type="number"
+                InputLabelProps={{
+                    shrink: true,
+                }}
                 onChange={(e) => setUnderstandingInput(e.target.value)}
+                value={understandingInput}
+                error={understandingInput > 5 || understandingInput < 0}
+                helperText="Must enter a value between 0 and 5"
             />
             <br />
             <br />

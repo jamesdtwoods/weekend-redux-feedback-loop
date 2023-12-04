@@ -26,8 +26,8 @@ function Feeling() {
 
     return(
         <>
-            {/* <h2>How are you feeling today?</h2>
-            <input
+            <h2>How are you feeling today?</h2>
+            {/* <input
                 data-testid="input"
                 onChange={(e) => setFeelingInput(e.target.value)}
                 value={feelingInput}
