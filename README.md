@@ -1,7 +1,3 @@
-![REPO SIZE](https://img.shields.io/github/repo-size/scottbromander/the_marketplace.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/scottbromander/the_marketplace.svg?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
-
 # Full Stack Feedback
 
 ## Description
@@ -12,7 +8,10 @@ This was my first solo full stack CRUD web app using redux to handle state and M
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+<img width="502" alt="Screenshot 2024-01-13 at 2 18 53 PM" src="https://github.com/jamesdtwoods/weekend-redux-feedback-loop/assets/142618619/b5d74f92-7a91-4be0-911e-eb70c1662af6">
+<img width="610" alt="Screenshot 2024-01-13 at 2 19 12 PM" src="https://github.com/jamesdtwoods/weekend-redux-feedback-loop/assets/142618619/c6f90d21-8aa2-4555-b4f3-0a0333a303e6">
+<img width="483" alt="Screenshot 2024-01-13 at 2 19 41 PM" src="https://github.com/jamesdtwoods/weekend-redux-feedback-loop/assets/142618619/e93de634-70eb-44b5-a378-d83f929cb091">
+<img width="878" alt="Screenshot 2024-01-13 at 2 22 28 PM" src="https://github.com/jamesdtwoods/weekend-redux-feedback-loop/assets/142618619/617adf10-2850-417f-bd2c-383d9abeee2f">
 
 ### Prerequisites
 
